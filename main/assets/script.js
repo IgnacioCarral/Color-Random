@@ -29,19 +29,19 @@ function getRandomHsl(){
     let hueValue = 0;
     hueValue = Math.floor(
         Math.random() * (360 + 1)
-    )
+    );
     
     let satValue = 0;
     satValue = Math.floor(
         Math.random() * (100 + 1)
-    )
+    );
 
     let lightValue = 0;
     lightValue = Math.floor(
         Math.random() * (100 + 1)
-    )
+    );
 
-    return 'hsl(' + hueValue + ', ' + satValue + '%, ' + lightValue + '%)';
+    return 'hsl(' + hueValue + ', ' + satValue + '%, ' + lightValue + '%)';  
 }
 
 
@@ -122,10 +122,6 @@ hslBtn.addEventListener('click', () => {
     let hslLightValue = hslStringComplete;
     let lightValue = hslLightValue.toString().substr(13,3).replace(/\D/g,'')
     console.log(hslLightValue.substr(13,3).replace(/\D/g,''));
-        
-    if(lightValue < 40){
-        innerHTML('input').style.backgroundColor = "white";
-    }
 
 })
 
